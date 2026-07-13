@@ -2,29 +2,33 @@
 
 ## Overview
 
-This project analyzes a large-scale U.S. hospital dataset to identify operational, financial, and quality-related factors influencing hospital performance. Using statistical analysis, Principal Component Analysis (PCA), clustering, and exploratory data analysis, the project uncovers key performance drivers and generates data-driven business insights.
+This project analyzes a large-scale U.S. hospital dataset to identify the operational, financial, and quality-related factors influencing hospital performance. Statistical analysis, Principal Component Analysis (PCA), clustering, and segmentation techniques were applied to uncover patterns across hospitals and generate actionable business insights.
 
 ---
 
 ## Objectives
 
-- Analyze hospital operational and financial performance
-- Identify key variables influencing hospital quality and profitability
+- Analyze operational, financial, and quality performance across hospitals
+- Identify key variables driving profitability and CMS Summary Star Ratings
 - Reduce data dimensionality using Principal Component Analysis (PCA)
-- Compare hospital performance across multiple demographic segments
-- Generate actionable insights through statistical analysis and visualization
+- Compare hospital performance across regions, hospital size, and urban/rural classifications
+- Discover hidden patterns using clustering techniques
+- Generate data-driven recommendations for healthcare performance evaluation
 
 ---
 
 ## Dataset
 
-The dataset contains over **100,000 hospital records** with information including:
+The analysis uses a merged hospital dataset containing financial, operational, and quality metrics, including:
 
-- Hospital characteristics
-- Financial performance metrics
+- Hospital financial performance
+- Net income
+- Revenue and operating costs
 - CMS Summary Star Ratings
-- Geographic information
-- Operational performance indicators
+- Patient satisfaction metrics
+- Hospital size and capacity
+- Geographic location
+- Rural vs. Urban classifications
 
 ---
 
@@ -33,51 +37,53 @@ The dataset contains over **100,000 hospital records** with information includin
 ### Data Preparation
 
 - Data cleaning
-- Missing value handling
+- Missing value imputation
 - Feature selection
-- Data normalization
+- Data standardization
 
 ### Exploratory Data Analysis (EDA)
 
 - Distribution analysis
 - Correlation analysis
-- Feature exploration
 - Descriptive statistics
+- Feature exploration
 
-### Statistical Analysis
+### Principal Component Analysis (PCA)
 
-- Principal Component Analysis (PCA)
-- Explained Variance Analysis
-- Component Weight Analysis
-- Correlation Analysis
+- Component weight analysis
+- Explained variance analysis
+- Scree plot evaluation
+- Elbow point analysis
+- Dimensionality reduction
 
 ### Segmentation Analysis
 
-- Urban vs. Rural Hospitals
-- Hospital Bed Size Categories
-- Regional Comparisons
+- Urban vs. Rural hospitals
+- Hospital bed-size categories
+- Regional analysis (West, South, Midwest, Northeast)
 
 ### Machine Learning
 
 - K-Means Clustering
+- Cluster evaluation using Silhouette Score
 
-### Data Visualization
+### Visualization
 
-- Scatter Plots
-- Scree Plot
-- Correlation Heatmap
-- PCA Projection Plots
-- Cluster Visualizations
+- PCA projection plots
+- Scree plots
+- Correlation heatmaps
+- Cluster visualizations
+- Regional comparison charts
 
 ---
 
 ## Key Findings
 
-- Identified principal components explaining the majority of variation in hospital performance.
-- Evaluated relationships between financial, operational, and quality metrics.
-- Compared hospital performance across geographic regions and hospital categories.
-- Applied clustering techniques to identify groups of hospitals with similar operational characteristics.
-- Generated data-driven insights to support healthcare performance evaluation.
+- Financial variables such as operating costs, revenue, and hospital size explained the greatest variation in hospital performance.
+- Patient satisfaction metrics formed a separate principal component, highlighting their independent contribution to hospital quality.
+- Hospital profitability varied substantially across regions, hospital sizes, and urban/rural classifications.
+- Medium-sized hospitals generally demonstrated stronger financial performance than very small or very large hospitals.
+- PCA successfully reduced data complexity while preserving key information for downstream analysis and visualization.
 
 ---
 
@@ -110,7 +116,11 @@ The dataset contains over **100,000 hospital records** with information includin
 
 ## Repository Contents
 
--  Complete data analysis notebook
-- `images/` — Key visualizations and analytical outputs
-- `README.md` — Project overview and methodology
+- `Hospital_Analytics.ipynb` — Complete analytical workflow
+- `images/` — Key figures and visualizations
+- `README.md` — Project overview
 
+
+## Business Impact
+
+This project demonstrates how statistical analysis and machine learning can support healthcare decision-making by identifying the financial, operational, and quality factors associated with hospital performance. The findings can help healthcare organizations prioritize operational improvements, evaluate performance across hospital segments, and support evidence-based strategic planning.
